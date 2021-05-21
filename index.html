@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double M Caffe</title>
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- page header placeholder-->
+    <div id="header"></div>
+
+    <!-- navigation bar placeholder -->
+    <nav id="navBar"></nav>
+
+    <!-- picture slideshow -->
+    <div class="imageContainer">
+        <img class="imageSlides" src="images/baristaswag.com-latte-art-pouring.jpg" alt="latte-art-pouring-image">
+        <img class="imageSlides" src="images/7-themes.com-pie-dessert.jpg" alt="cherry-pie-dessert">
+        <img class="imageSlides" src="images/7-themes.com-ice-cream-currant-dessert.jpg"
+            alt="ice-cream-currant-dessert">
+
+        <!-- side arrows for manual forward and backward scroll -->
+        <img id="leftArrow" class="slideshowArrow" src="images/freeiconspng.com-white-arrow-left.png"
+            alt="left-arrow-white">
+        <img id="rightArrow" class="slideshowArrow" src="images/freeiconspng.com-white-arrow-right.png"
+            alt="right-arrow-white">
+
+        <div class="slideshowCircles">
+            <!-- class 'circle fill' moves to match the images via Javascript -->
+            <span class="circle fill"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+        </div>
+
+    </div>
+
+    <!-- reference -->
+    <div class="reference">Image sourced from: 
+        <a href="https://www.baristaswag.com/blogs/news/beginner-3-step-latte-art-guide"
+            target="_blank">{baristaswag.com/blogs/news/beginner-3-step-latte-art-guide}, </a>
+        <a href="http://7-themes.com/7023807-ice-cream-currant-dessert.html"
+            target="_blank">{7-themes.com/7023807-ice-cream-currant-dessert.html}, </a>
+        <a href="http://7-themes.com/7023807-ice-cream-currant-dessert.html"
+            target="_blank">{7-themes.com/7023807-ice-cream-currant-dessert.html}</a>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div>
+
+    <!-- javascript -->
+    <script src="header.js"></script>
+    <script src="nav.js"></script>
+    <script src="footer.js"></script>
+    <script src="slideshow.js"></script>
+
+</body>
+
+</html>

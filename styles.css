@@ -1,0 +1,353 @@
+body {
+    font-family: Calibri, Candara, Segoe;
+    background-color: white;
+    color: #333;
+}
+
+#header {
+    text-align: center;
+    font-family: 'Caveat';
+    font-size: 45px;
+    padding-top: 22px;  
+}
+
+#header a {
+    text-decoration: none; 
+    color: saddlebrown
+}
+
+/* navigation */
+#navBar {
+    display: block;
+    text-align: center;
+    position: relative;
+    left: 0;
+    width: 100%;
+}
+
+#navBar span {
+    display: inline-block;
+}
+
+#navBar ul {
+    list-style-type: none;
+}
+
+.nav-item {
+    float: left;
+}
+
+.nav-item a {
+    display: block;
+    color: rgb(102, 48, 9, 0.8);
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 25px 10px 25px;
+    text-decoration: none;
+}
+
+.nav-item a:hover {
+    opacity: 70%;
+}
+
+/* image slideshow */
+.imageContainer {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0 10px;
+    width: 100%;
+    height: 500px;
+}
+
+.imageSlides {
+    position: absolute;
+    z-index: -1;
+    /* display middle part of the images */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* 'visible' class via Javascript */
+.visible {
+    opacity: 1;
+}
+
+.slideshowArrow {
+    cursor: pointer;
+}
+
+.slideshowArrow:hover {
+    opacity: 0.75;
+}
+
+#leftArrow {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    left: 3%;
+    top: 50%;
+}
+
+#rightArrow {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    right: 3%;
+    top: 50%;
+}
+
+.slideshowCircles {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    text-align: center;
+}
+
+.circle {
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    transition: 1s ease-in-out;
+}
+
+.fill {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+/* contact form */
+/* Add background image and padding around the form */
+.outerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url('images/7-themes.com-food-cupcakes-hearts-love.jpg');
+    z-index: -1;
+    min-width: 100%;
+    min-height: 500px;
+}
+#contactForm {
+    padding: 50px 100px 20px 200px;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px;
+    resize: none;
+    background-color:rgba(255, 255, 255, 0.7)
+}
+
+::placeholder {
+    font-family: Calibri, Candara, Segoe;
+    color: #999
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    font-family: 'Caveat';
+    font-size: 25px;
+    color: brown;
+    background-color: transparent;
+    width: 100%;
+    min-width: 200px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    opacity: 70%;
+}
+
+#contactText {
+    text-align: center;
+    padding: 130px 50px 150px 50px;
+}
+
+#contactText span {
+    font-size: 40px;
+    font-weight: lighter;
+    color: brown;
+}
+
+#contactText p {
+    font-style: italic;
+    font-size: 20px;
+    color: #222;
+}
+
+/* menus */
+#downloadMenu {
+    width: 100%;
+}
+#downloadMenu a {
+    display: block;
+    font-family: Calibri, Candara, Segoe;
+    font-size: 17px;
+    text-align: center;
+    color:saddlebrown
+}
+
+#downloadMenu a:hover {
+    opacity: 70%;
+}
+
+.menuContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-image: url('images/hdqwalls.com-coffee-cup-drink-notebook-table.jpg');
+    z-index: -1;
+    min-width: 100%;
+    min-height: 500px;
+}
+
+.menuBox {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    width: 50%;
+    border: 0px;
+    border-radius: 20px;
+    padding: 50px;
+}
+
+.menuBox ul {
+    list-style-type: circle;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.menuBox ul li {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding: 5px;
+    color:Saddlebrown;
+}
+
+.menuTitle {
+    text-align: center;
+    font-family: 'Caveat';
+    font-size: 50px;
+    color: brown;
+}
+
+/* location */
+#locationContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: -1;
+    overflow: auto;
+}
+
+.locationLeftColumn {
+    padding-left: 100px;
+    width: 100%;
+    margin: auto;
+    height: auto;
+    z-index: 0;
+}
+
+.locationRightColumn {
+    padding-left: 100px;
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    z-index: 0;
+}
+
+#location {
+    font-size: 35px;
+    height: 250px;
+    padding-top: 20px;
+}
+
+#locationText {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+#location a {
+    font-size: 18px;
+    color: #333;
+    font-style: italic;
+}
+
+#location a:hover {
+    opacity: 70%;
+}
+
+#hours {
+    font-size: 35px;
+    height: 250px;
+}
+
+#hours ul {
+    list-style-type: none;
+    font-size: 18px;
+    text-align: left;
+}
+
+#scrollBox {
+    padding-left: 30px;
+    width: 300px;
+    height: 100px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+/* footer */
+#footer {
+    background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    z-index: 1;
+}
+
+#footer a {
+    display: block;
+    font-family: Calibri, Candara, Segoe;
+    font-size: 17px;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px;
+}
+
+#footer a:hover {
+    color: saddlebrown;
+}
+
+.reference {
+    font-size: 13px;
+    font-family: Courier New, monospace;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.reference a {
+    text-decoration: none;
+    color: #333;
+    font-weight: lighter;
+}
+
+.reference a:hover {
+    opacity: 70%;
+}
