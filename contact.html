@@ -18,26 +18,35 @@
     <!-- navigation bar placeholder -->
     <nav id="navBar"></nav>
 
-    <!-- footer -->
-    <div id="footer"></div>
+    <!-- contact page -->
+    <div class="imageContainerContact">
 
-    <!-- contact form -->
-    <div class="imageContainer">
-        <div class="outerContainer">
+        <!-- image reference -->
+        <div class="reference">Image sourced from:
+            <a href="http://7-themes.com/7002782-food-cupcakes-hearts-love.html"
+                target="_blank">{7-themes.com/7002782-food-cupcakes-hearts-love.html}</a>
+        </div>
+
+        <!-- contact form -->
+        <div class="outerContainer" style="background-image: url('images/7-themes.com-food-cupcakes-hearts-love.jpg');">
             <div id="contactForm">
-                <form id="form1"
-                    action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php"
-                    method="post">
-                    <label for="name">Name</label></br>
-                    <input type="text" name="name_input" placeholder="Your name..."></br>
-                    <label for="email">Email</label></br>
-                    <input type="text" name="email_input" placeholder="Email address..."></br>
-                    <label for="subject">Subject</label></br>
-                    <textarea id="subject" name="subject" placeholder="Write something..."
-                        style="min-height:100px"></textarea></br>
-                    <input type="submit" id="submit1" value="Submit">
+                <!-- post request result placeholder-->
+                <div id="resultPost"></div>
+
+                <form action="/post" id='form1' method="post">
+                    <label for="nameInput">Name</label></br>
+                    <input type="text" id="nameInput" name="name_input" placeholder="Your name..."></br>
+                    <label for="emailInput">Email</label></br>
+                    <input type="text" id="emailInput" name="email_input" placeholder="Email address..."></br>
+                    <label for="subjectInput">Subject</label></br>
+                    <textarea id="subjectInput" name="subject" placeholder="Write something..."
+                        style="min-height:50px"></textarea></br>
+                    <button id="submitPost" class="button">Submit</button>
                 </form>
+                
             </div>
+
+            <!-- contact Us Text -->
             <div id="contactText">
                 <span>Contact Us</span>
                 <p>Send us any questions or comments!</p>
@@ -45,17 +54,15 @@
         </div>
     </div>
 
-    <!-- reference -->
-    <div class="reference">Image sourced from:
-        <a href="http://7-themes.com/7002782-food-cupcakes-hearts-love.html"
-            target="_blank">{7-themes.com/7002782-food-cupcakes-hearts-love.html}</a>
-    </div>
+    <!-- footer -->
+    <div id="footer"></div>
 
     <!-- javascript -->
     <script src="header.js"></script>
     <script src="nav.js"></script>
     <script src="footer.js"></script>
     <script src="contact.js"></script>
+
 </body>
 
 </html>

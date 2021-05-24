@@ -1,83 +1,93 @@
-// display the first image
-// then set slideshow interval
+// display the first image immediately
 setTimeout(slideshow, 0);
-var slideshowInterval = setInterval(slideshow, 7000);
+
+// then set slideshow interval
+var slideshowInterval = setInterval(slideshow, 6000);
 
 var imageSlides = document.getElementsByClassName('imageSlides');
 var circles = document.getElementsByClassName('circle');
 var leftArrow = document.getElementById('leftArrow');
 var rightArrow = document.getElementById('rightArrow');
+var imageLength = imageSlides.length;
 var imageIndex = 0;
 
-// hide images function
+// function to hide all images
 function hideImages() {
-  for (var i = 0; i < imageSlides.length; i++) {
-    imageSlides[i].classList.remove('visible');
-  }
+    for (var i = 0; i < imageLength; i++) {
+        // use classList API to remove class
+        imageSlides[i].classList.remove('visibleImage');
+    }
 }
 
-// remove filled circle
+// function to empty all filled circle
 function emptyCircle() {
-  for (var i = 0; i < imageSlides.length; i++) {
-    circles[i].classList.remove('fill');
-  }
+    for (var i = 0; i < imageLength; i++) {
+        circles[i].classList.remove('filledCircle');
+    }
 }
 
 // change current image to the next one
 // empty current circle and fill the next circle
 function nextImage() {
-  var currentImage = imageSlides[imageIndex];
-  var currentCircle = circles[imageIndex];
-  currentImage.classList.add('visible');
-  emptyCircle();
-  currentCircle.classList.add('fill');
-  imageIndex++;
-}
-
-// left and right arrows event function on click
-function arrowClick(event) {
-  var target = event.target;
-  if (target == leftArrow) {
-    // reset interval when arrow is clicked
-    clearInterval(slideshowInterval);
-    hideImages();
+    var currentImage = imageSlides[imageIndex];
+    var currentCircle = circles[imageIndex];
+    // use classList API to add class
+    currentImage.classList.add('visibleImage');
     emptyCircle();
-    if (imageIndex == 1) {
-      imageIndex = (imageSlides.length - 1);
-      nextImage();
-      slideshowInterval = setInterval(slideshow, 7000);
-    } else {
-      imageIndex--;
-      imageIndex--;
-      nextImage();
-      slideshowInterval = setInterval(slideshow, 7000);
-    }
-  } 
-  else if (target == rightArrow) {
-    clearInterval(slideshowInterval);
-    hideImages();
-    emptyCircle();
-    if (imageIndex == imageSlides.length) {
-      imageIndex = 0;
-      nextImage();
-      slideshowInterval = setInterval(slideshow, 7000);
-    } else {
-      nextImage();
-      slideshowInterval = setInterval(slideshow, 7000);
-    }
-  }
+    currentCircle.classList.add('filledCircle');
+    imageIndex++;
 }
-
-leftArrow.addEventListener('click', arrowClick);
-rightArrow.addEventListener('click', arrowClick);
 
 // slideshow function
 function slideshow() {
-  if (imageIndex < imageSlides.length) {
-    nextImage();
-  } else {
-    imageIndex = 0;
-    hideImages();
-    nextImage();
-  }
+    if (imageIndex < imageLength) {
+        nextImage();
+    } else {
+        imageIndex = 0;
+        hideImages();
+        nextImage();
+    }
 }
+
+// left and right arrows event function
+function arrowClick(event) {
+    var target = event.target;
+
+    if (target == leftArrow) {
+        // reset interval when arrow is clicked
+        clearInterval(slideshowInterval);
+        hideImages();
+        emptyCircle();
+
+        if (imageIndex == 1) {
+            imageIndex = (imageLength - 1);
+            nextImage();
+            slideshowInterval = setInterval(slideshow, 6000);
+        } 
+        else {
+            imageIndex -= 2;
+            nextImage();
+            slideshowInterval = setInterval(slideshow, 6000);
+        }
+    }
+    else if (target == rightArrow) {
+        // reset interval when arrow is clicked
+        clearInterval(slideshowInterval);
+        hideImages();
+        emptyCircle();
+
+        if (imageIndex == imageLength) {
+            imageIndex = 0;
+            nextImage();
+            slideshowInterval = setInterval(slideshow, 6000);
+        } 
+        else {
+            nextImage();
+            slideshowInterval = setInterval(slideshow, 6000);
+        }
+    }
+}
+
+// event listener on click
+leftArrow.addEventListener('click', arrowClick);
+rightArrow.addEventListener('click', arrowClick);

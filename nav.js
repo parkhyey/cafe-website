@@ -7,5 +7,6 @@ document.getElementById("navBar").innerHTML =
     '<li class="nav-item"><a href="location.html">Location</a></li>' +
     '<li class="nav-item"><a href="contact.html">Contact</a></li>' +
     '</ul>' +
-    '</span>'
+    '</span>' +
+    '<hr class="line">'
     ;
