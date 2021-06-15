@@ -1,6 +1,8 @@
 # simple-website-project
 This is my first website built using HTML/CSS and pure JavaScript. 
 The form on the contact page uses Ajax via POST and submit data to http://httpbin.org/post.
+The website is live at : http://web.engr.oregonstate.edu/~parkhyey/.
+
 The website meets below requirements. 
 
 # Requirements
