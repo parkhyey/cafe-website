@@ -1,5 +1,5 @@
 # simple-website-project
-This is my first website built using HTML/CSS and JavaScript. 
+This is my first website built using HTML/CSS and pure JavaScript. 
 The website meets below requirements.
 
 # Requirements
