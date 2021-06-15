@@ -3,9 +3,11 @@ This is my first website built using HTML/CSS and pure JavaScript.
 The form on the contact page uses Ajax via POST and submit data to http://httpbin.org/post.
 The website is live at : http://web.engr.oregonstate.edu/~parkhyey/.
 
+![](images/doubleM.jpg)
+
 The website meets below requirements. 
 
-# Requirements
+## Requirements
   1. The webpages should be presentable as a whole; the interface should be user friendly (text should be easy to read).
   2. The website should contain pictures and/or videos, and they should be presentable as well (placed in a proper place, easy to see, have proper size and resolution).
   3. The website has 1 homepage and at least 3 subpages; the homepage and subpages have a horizontal menu that leads to the other pages. This means 4 total pages will be required.
