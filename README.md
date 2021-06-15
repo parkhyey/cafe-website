@@ -4,8 +4,7 @@ The form on the contact page uses Ajax via POST and submit data to http://httpbi
 The website is live at : http://web.engr.oregonstate.edu/~parkhyey/.
 
 ![](images/doubleM-homepage.jpg)
-![](images/doubleM-menupage.jpg) 
-![](images/doubleM-contactpage.jpg) 
+
 
 The website meets below requirements. 
 
