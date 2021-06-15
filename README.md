@@ -3,7 +3,9 @@ This is my first website built using HTML/CSS and pure JavaScript.
 The form on the contact page uses Ajax via POST and submit data to http://httpbin.org/post.
 The website is live at : http://web.engr.oregonstate.edu/~parkhyey/.
 
-![](images/doubleM-homepage.jpg)
+![](images/doubleM-home.jpg)
+![](images/doubleM-menu.jpg) 
+![](images/doubleM-contact.jpg) 
 
 
 The website meets below requirements. 
