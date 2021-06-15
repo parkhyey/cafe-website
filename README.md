@@ -1,6 +1,6 @@
 # simple-website-project
 This is my first website built using HTML/CSS and pure JavaScript. 
-The website meets below requirements.
+The website meets below requirements. The form on the contact page uses Ajax via POST.
 
 # Requirements
   1. The webpages should be presentable as a whole; the interface should be user friendly (text should be easy to read).
